@@ -18,7 +18,9 @@
  * @return {number} sum of two numbers
  */
 
-function add(a, b) {}
+function add(a, b) {
+  return a + b;
+}
 
 /**
  * Complete the function multiply, which should multiply two numbers
@@ -27,7 +29,9 @@ function add(a, b) {}
  * @return {number} product of two numbers
  */
 
-function multiply() {}
+function multiply(a, b) {
+  return a * b;
+}
 
 /**
  * Debug this function using either `console.log` or
@@ -39,7 +43,7 @@ function getMessage() {
   var message = "";
 
   for (var i = 1; i < 10; i++) {
-    mesage = message + "...";
+    message = message + "...";
   }
 
   message = message + "\n"; // New line

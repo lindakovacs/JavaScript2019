@@ -34,7 +34,8 @@ function getMessage() {
   var message = "";
 
   for (var i = 1; i < 10; i++) {
-    mesage = message + "...";
+    message = message + "...";
+    console.log(message);
   }
 
   message = message + "\n"; // New line
@@ -42,16 +43,19 @@ function getMessage() {
   var fruits = ["apple", "kiwi", "banana", "orange", "blueberry"];
   for (var j = 0; j < fruits.length; j++) {
     message = message + String(i) + " " + fruits[j] + "\n";
+    console.log(message);
   }
 
   var moreFruits = ["cranberry", "mango", "passion fruit", "avocado", "cherry"];
   for (var k = 0; k < moreFruits.length; k++) {
     var num = k + fruits.length;
     message = message + String(num) + " " + fruits[k] + "\n";
+    console.log(message);
   }
 
   for (var z = 1; z < 10; z++) {
     message = message + "...";
+    console.log(message);
   }
 
   return message;

@@ -6,6 +6,7 @@
 function createAnArray() {
   var array = [];
   /*** Add three items to the array ****/
+  array = ["JavaScript", "Java", "Phyton"];
   return array;
 }
 
@@ -16,7 +17,8 @@ function createAnArray() {
  */
 
 function accessingAnArray() {
-  var cars = ['BMW', 'Honda', 'Civic'];
+  var cars = ["BMW", "Honda", "Civic"];
+  return cars[0];
 }
 
 /**
@@ -28,7 +30,15 @@ function accessingAnArray() {
  * highestNumber([5, 1, 2, 3, 10]) // [10]
  *
  **/
-function highestNumber(array) {}
+function highestNumber(array) {
+  var highest = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (highest < array[i]) {
+      highest = array[i];
+    }
+  }
+  return highest;
+}
 
 /**
  * Combine an array by using the spread operator
@@ -39,7 +49,10 @@ function highestNumber(array) {}
  * combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
 
-function combineArray(array1, array2) {}
+function combineArray(array1, array2) {
+  var array1 = ['Japan','China','India'];
+  var array2 = ['USA','UK'];
+}
 
 /**
  * A palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam, nurses or run.
@@ -67,9 +80,9 @@ function createDogObject() {}
  */
 function accessObject() {
   var clothes = {
-    hat: 'ballcap',
-    shirt: 'jersey',
-    shoes: 'cleats'
+    hat: "ballcap",
+    shirt: "jersey",
+    shoes: "cleats"
   };
   // Only change code below this line
 
@@ -86,8 +99,8 @@ function accessObject() {
 
 function createStudentObject() {
   var student = {
-    firstname: '',
-    lastname: '',
+    firstname: "",
+    lastname: "",
     skills: []
   };
   // Only change code below this line.
@@ -106,8 +119,8 @@ function returnObjectProperties() {
   var dog = {
     tail: 1,
     legs: 4,
-    friends: ['Rusty', 'Sparky'],
-    name: 'Rocket'
+    friends: ["Rusty", "Sparky"],
+    name: "Rocket"
   };
   //Add code here
   //hint you need to return an array
