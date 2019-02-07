@@ -96,6 +96,6 @@ describe('Data structures', () => {
       4,
       5
     ]);
-    expect(unique).to.be.equalTo([2, 3, 4, 5, 6, 7, 32, 5]);
+    expect(unique).to.be.equalTo([2, 3, 4, 5, 6, 7, 32]);
   });
 });
