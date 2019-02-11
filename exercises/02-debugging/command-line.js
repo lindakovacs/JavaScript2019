@@ -50,13 +50,13 @@ function getMessage() {
 
   var fruits = ["apple", "kiwi", "banana", "orange", "blueberry"];
   for (var j = 0; j < fruits.length; j++) {
-    message = message + String(i) + " " + fruits[j] + "\n";
+    message = message + String(j+1) + " " + fruits[j] + "\n";
   }
 
   var moreFruits = ["cranberry", "mango", "passion fruit", "avocado", "cherry"];
   for (var k = 0; k < moreFruits.length; k++) {
-    var num = k + fruits.length;
-    message = message + String(num) + " " + fruits[k] + "\n";
+    var num = k + fruits.length+1;
+    message = message + String(num) + " " + moreFruits[k] + "\n";
   }
 
   for (var z = 1; z < 10; z++) {
