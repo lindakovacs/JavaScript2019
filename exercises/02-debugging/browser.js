@@ -42,13 +42,13 @@ function getMessage() {
 
   var fruits = ["apple", "kiwi", "banana", "orange", "blueberry"];
   for (var j = 0; j < fruits.length; j++) {
-    message = message + String(j+1) + " " + fruits[j] + "\n";
+    message = message + String(j + 1) + " " + fruits[j] + "\n";
     console.log(message);
   }
 
   var moreFruits = ["cranberry", "mango", "passion fruit", "avocado", "cherry"];
   for (var k = 0; k < moreFruits.length; k++) {
-    var num = k + fruits.length;
+    var num = k + fruits.length + 1;
     message = message + String(num) + " " + moreFruits[k] + "\n";
     console.log(message);
   }

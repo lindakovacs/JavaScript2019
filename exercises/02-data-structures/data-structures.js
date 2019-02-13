@@ -100,9 +100,9 @@ function createDogObject() {
  */
 function accessObject() {
   var clothes = {
-    hat: "ballcap",
-    shirt: "jersey",
-    shoes: "cleats"
+    hat: 'ballcap',
+    shirt: 'jersey',
+    shoes: 'cleats'
   };
   // Only change code below this line
 
@@ -119,11 +119,15 @@ function accessObject() {
 
 function createStudentObject() {
   var student = {
-    firstname: "Linda",
-    lastname: "Kovacs",
-    skills: ["HTM5", "CSS3", "JavaScript"]
+    firstname: '',
+    lastname: '',
+    skills: []
   };
   // Only change code below this line.
+
+  student.firstname = 'Linda',
+  student.lastname = 'Kovacs',
+  student.skills.push('HTM5', 'CSS3', 'JavaScript')
 
   return student;
 }
@@ -144,7 +148,8 @@ function returnObjectProperties() {
   };
   //Add code here
   //hint you need to return an array
-  return [dog["name"], dog["tail"], dog["legs"], dog['friends']];
+  //return [dog["name"], dog["tail"], dog["legs"], dog['friends']];
+  return Object.keys(dog);
 }
 
 /**
