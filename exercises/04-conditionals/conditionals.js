@@ -23,6 +23,8 @@
  *   payload: 1.00
  * };
  *
+ *
+ *
  * product = updateProduct(product, action);
  * console.log(product); // { name: "toothbrush", cost: 2.99 }
  *

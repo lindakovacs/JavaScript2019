@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const {
   updateProduct
-} = require("../../exercises/03-conditionals/conditionals");
+} = require("../../exercises/04-conditionals/conditionals");
 
 describe("Conditionals", () => {
   describe("updateProduct", () => {
