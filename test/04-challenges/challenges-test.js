@@ -13,7 +13,7 @@ describe("Challenges", () => {
   });
   it("should repeat the given string for the amount of times based off of the second argument", () => {
     const string = repeatStringNumTimes("abc", 3);
-    expect(string).to.equal('"abcabcabc"');
+    expect(string).to.equal("abcabcabc");
     const empty = repeatStringNumTimes("abc", -2);
     expect(empty).to.equal("");
   });
