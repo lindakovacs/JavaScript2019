@@ -20,6 +20,16 @@ const calculator = () => {
    * that should return the value of "sum" above.
    * @returns {number} the value of sum
    */
+
+  var total = [];
+  return {
+    getSum: function() {
+      return total;
+    },
+    addSum: function(total) {
+      total.push(total);
+    }
+  }
 };
 
 /**

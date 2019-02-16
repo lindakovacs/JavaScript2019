@@ -8,7 +8,15 @@
  *
  */
 
-var confirmEnding = () => {};
+var confirmEnding = (str, target) => {
+  return (str.substr(-target.length) === target) ? true : false;
+  //return str.substr(-target.length) === target;
+  // if (str.substr(-target.length) === target) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+};
 
 /**
  *  Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
@@ -20,7 +28,16 @@ var confirmEnding = () => {};
  *  @example repeatStringNumTimes("abc", -2) should return ""
  */
 
-var repeatStringNumTimes = () => {};
+var repeatStringNumTimes = (str, times) => {
+  //var newString = '';
+
+  return (times > 0) ? str.repeat(times) : "";
+  // if (times > 0)
+  //   return str.repeat(times);
+  // else
+  //   return "";
+};
+//console.log(repeatStringNumTimes('abc', 3));
 
 /**
  *  Find the Longest Word in a String
@@ -32,7 +49,10 @@ var repeatStringNumTimes = () => {};
  *
  */
 
-var findLongestWordLength = () => {};
+var findLongestWordLength = (str) => {
+  var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
+  return longestWord[0].length;
+};
 
 module.exports = {
   findLongestWordLength,
