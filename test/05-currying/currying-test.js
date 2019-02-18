@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-const { multiplier } = require("../../exercises/04-currying/currying");
+const { multiplier } = require("../../exercises/05-currying/currying");
 
 describe("Currying", () => {
   describe("multiplier", () => {

@@ -15,7 +15,9 @@
         "--timeout",
         "999999",
         "--colors",
-        "${workspaceFolder}/test/**/*-test.js"
+        "${workspaceFolder}/test/**/*-test.js",
+        "--require",
+        "@babel/register"
       ],
       "internalConsoleOptions": "openOnSessionStart"
     }
