@@ -7,7 +7,12 @@
  *  - Eddy
  * @param {string} name instuctor name
  */
-const printer = () => {};
+//const printer = () => {};
+const printer = (name) => {
+  return "*** " + name + " ***";
+};
+
+//function prettier(name) { return "*** " + name + " ***";}
 
 /**
  * Loops through the array of strings
@@ -15,7 +20,13 @@ const printer = () => {};
  * @param {array}
  * @param {function} callback printer function
  */
-const printNames = () => {};
+//const printNames = () => {};
+const printNames = (arr, printer) => {
+  for (var i = 0; i < arr.length; ++i) {
+    printer(arr[i]);
+  }
+  //return "*** " + printer.arr[i] + " ***";
+};
 
 module.exports = {
   printer,

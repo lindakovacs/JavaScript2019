@@ -9,7 +9,12 @@
  */
 
 var confirmEnding = (str, target) => {
-  return (str.substr(-target.length) === target) ? true : false;
+
+  return str.substr(-target.length) === target ? true : false;
+
+  // return str.endsWith(target) ? true : false;
+  //return (str.substr(-target.length) === target) ? true : false;
+
   //return str.substr(-target.length) === target;
   // if (str.substr(-target.length) === target) {
   //   return true;
@@ -29,15 +34,14 @@ var confirmEnding = (str, target) => {
  */
 
 var repeatStringNumTimes = (str, times) => {
-  //var newString = '';
 
-  return (times > 0) ? str.repeat(times) : "";
-  // if (times > 0)
+  return times > 0 ? str.repeat(times) : "";
+  // if (times > 0) {
   //   return str.repeat(times);
-  // else
+  // } else {
   //   return "";
+  // }
 };
-//console.log(repeatStringNumTimes('abc', 3));
 
 /**
  *  Find the Longest Word in a String
@@ -49,9 +53,20 @@ var repeatStringNumTimes = (str, times) => {
  *
  */
 
+// var findLongestWordLength = () => {};
+
 var findLongestWordLength = (str) => {
-  var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
-  return longestWord[0].length;
+  // return str.length;
+  // var longestWord = str.split(" ").sort(function(a, b) {
+  //   return b.length - a.length;
+  // });
+  // return longestWord[0].length;
+
+  let comperingWord = str.split(' ').reduce(function(comparing, currentWord) {
+    return currentWord.length > comparing.length ? currentWord : comparing;
+  }, "");
+  return comperingWord.length;
+
 };
 
 module.exports = {
