@@ -5,7 +5,7 @@ chai.use(require("chai-arrays"));
 const {
   forEach,
   showFirstAndLast
-} = require("../../exercises/05-foreach/foreach");
+} = require("../../exercises/06-foreach/foreach");
 
 describe("forEach", () => {
   it("tests forEach", () => {
