@@ -10,6 +10,7 @@
 //const printer = () => {};
 const printer = (name) => {
   return "*** " + name + " ***";
+  //return `*** ${name} ***`;
 };
 
 //function prettier(name) { return "*** " + name + " ***";}
@@ -24,6 +25,14 @@ const printer = (name) => {
 const printNames = (arr, printer) => {
   for (var i = 0; i < arr.length; ++i) {
     printer(arr[i]);
+  }
+  //const printNames = (arr, printer) => {
+  //let result = '';
+  //for (var name of arr) {
+  //result = result + printer(name);
+  // }
+  //return result;
+  // };
   }
   //return "*** " + printer.arr[i] + " ***";
 };
