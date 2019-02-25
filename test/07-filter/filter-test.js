@@ -1,7 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
 chai.use(require("chai-arrays"));
-const { filter, deleteUser } = require("../../exercises/06-filter/filter");
+const { filter, deleteUser } = require("../../exercises/07-filter/filter");
 
 describe("filter", () => {
   it("tests filter will remove values that meet a given condition", () => {

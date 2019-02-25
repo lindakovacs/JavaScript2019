@@ -1,6 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
-const { find, findUser } = require("../../exercises/06-find/find");
+chai.use(require("chai-arrays"));
+const { find, findUser } = require("../../exercises/07-find/find");
 
 describe("find", () => {
   it("tests find to see if it returns a single value", () => {
