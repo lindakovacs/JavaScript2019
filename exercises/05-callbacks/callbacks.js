@@ -33,7 +33,7 @@ const printNames = (arr, printer) => {
   // }
   //return result;
   // };
-  }
+  //}
   //return "*** " + printer.arr[i] + " ***";
 };
 
