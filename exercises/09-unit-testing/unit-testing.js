@@ -1,7 +1,7 @@
 /**
  * STOP! You will not modify the code that is in the file.
  * Instead, you will be writing the unit tests for this exercise
- * inside *test/08-unit-testing/unit-testing-test.js*
+ * inside *unit-testing-test.js*.
  */
 
 /**

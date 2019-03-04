@@ -1,4 +1,21 @@
 /**
+ * You will need to have your *package.json* setup and mocha and chai
+ * dependencies installed for this to work. (We will do this in class).
+ *
+ * Before running this test (for this exercise only), you must be in the same
+ * folder as this file. If you do not know, type `pwd`. You should see
+ * `path/to/JavaScript2019/exercises/09-unit-testing/`. If you only see
+ * `path/to/JavaScript2019/` type:
+ * ```bash
+ * cd exercises/09-unit-testing/
+ * ```
+ * To run this test:
+ * ```bash
+ * npm run test ./unit-testing-test.js
+ * ```
+ */
+
+/**
  * I'm importing the *expect* library from chai.
  * This is kinda of like including JavaScipt libraries
  * with <script></script> tags.
@@ -11,12 +28,7 @@ const { expect } = require("chai");
  * Including the functions from *exercises/08-unit-testing/unit-testing.js*
  * so that I can test.
  */
-const {
-  add,
-  subtract,
-  isEvenNumber,
-  findAdults
-} = require("../../exercises/08-unit-testing/unit-testing"); // relative pathway to unit-testing.js file
+const { add, subtract, isEvenNumber, findAdults } = require("./unit-testing"); // relative pathway to unit-testing.js file
 
 describe("Unit Testing", () => {
   // If using VScode debugger, change `describe` to `describe.only`
