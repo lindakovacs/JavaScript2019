@@ -64,7 +64,7 @@ const tree = [
     ]
   },
   {
-    id: 123456,
+    id: 5678,
     name: 'Cover',
     activityId: 'ZDFEFEFEFEFEFEEF12233',
     nodeType: 'activity',
@@ -74,7 +74,7 @@ const tree = [
   {
     children: [
       {
-        id: 123456,
+        id: 5567,
         name: 'Consultants, Reviewers, and National Geographic Exploration',
         activityId: '123456788643',
         nodeType: 'activity',
@@ -82,7 +82,7 @@ const tree = [
         hidden: false
       },
       {
-        id: 123456,
+        id: 77777,
         name: 'The National Geographic Approach',
         activityId: 'JZLS37EVZQM22H9Q4655',
         nodeType: 'activity',
