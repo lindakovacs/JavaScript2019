@@ -26,7 +26,7 @@ const tree = [
         hidden: false
       },
       {
-        id: 5777777,
+        id: 57788,
         name: 'The National Geographic Approach',
         activityId: 'JZLS37EVZQM22H9Q4655',
         nodeType: 'activity',
