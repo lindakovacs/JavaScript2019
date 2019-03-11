@@ -25,19 +25,20 @@
 // }
 
 class Calculator {
-  //total = 0;
-  constructor(startValue = 0) {
-  //   if (typeof startValue === "number") total = startValue;
-  // }
-    // add = (num) => {
-    //   if(typeof num === 'number') this.total += num;
-    // }
-    // get = () => this.total;
-    this.total = startValue;
+total = 0;
+  constructor(startValue) {
+    if (typeof startValue === "number") this.total = startValue;
   }
-    add = num => typeof(num) === 'number' ? this.total += num : null;
+    add = (num) => {
+      if(typeof num === 'number') this.total += num;
+    }
     get = () => this.total;
-  }
+};
+  //this.total = startValue;
+  //}
+  // add = num => typeof(num) === 'number' ? this.total += num : null;
+  //get = () => this.total;
+  //}
 
 /**
  * Create NewCalculator ESNext class which will extend the class Calculator.
@@ -50,11 +51,11 @@ class NewCalculator extends Calculator{
   constructor(startValue) {
     super(startValue);
   }
-  // subtract = (num) => {
-  //   if(typeof num === 'number') this.total -= num;
-  // }
-  // get = () => this.total;
-  subtract = num => typeof(num) === 'number' ? this.total -= num : null;
+  subtract = (num) => {
+    if(typeof num === 'number') this.total -= num;
+  }
+//subtract = num => typeof(num) === 'number' ? this.total -= num : null;
+//get = () => this.total;
 }
 
 
