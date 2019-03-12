@@ -53,5 +53,5 @@ If you are unfamilar with unordered list, see [Unordered HTML List](https://www.
 Import the _IsUserLoggedIn_ component and include it where instructed. Be sure to pass the _Users_ constant in as props. Here is an example:
 
 ```jsx
-<IsUserLoggedIn Users={Users}>
+<IsUserLoggedIn Users={Users} />
 ```
