@@ -10,16 +10,20 @@ class App extends Component {
     showText: true
   };
 
-  toggle = () => {};
+  toggle = () => {
+    this.setState({
+      showText: !this.state.showText
+    });
+  };
 
   render() {
     return (
       <div className="container pt-4">
-        <button type="button" class="btn btn-primary btn-lg mb-2">
+        <button onClick={() => this.toggle()} type="button" class="btn btn-primary btn-lg mb-2">
           Show / Hide Text
         </button>
         {/* Hide the text here */}
-        <h1>Now you see me!</h1>
+        <h1>{this.state.showText ? "Now you see me!" : "" }</h1>
       </div>
     );
   }

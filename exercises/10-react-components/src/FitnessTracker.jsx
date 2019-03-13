@@ -26,11 +26,18 @@ import activities from "./FitnessTrackerActivities.json";
 
 function FitnessActivity(props) {
   // Put the HTML as JSX
+  return <div class="FitnessActivity">
+          <div class="FitnessActivity-startDate">{props.startDate}</div>
+          <div class="FitnessActivity-activity">{props.activity}</div>
+          <div class="FitnessActivity-miles">{props.miles} miles</div>
+          <div class="FitnessActivity-time">{props.time}</div>
+        </div>
 }
 
 function FitnessTracker() {
   // Loop through activities here
-  return <>Put JSX Here</>;
+  //return <>Put JSX Here</>;
+  return <>{activities.map(FitnessActivity)}</>;
 }
 
 export default FitnessTracker;
