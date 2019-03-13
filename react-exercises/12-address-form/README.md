@@ -4,10 +4,10 @@ In Visual Studio code, press `command+shift+v` (Mac) or `ctrl+shift+v` (Windows)
 
 ## Getting Started
 
-Using your command line, you will need to navigate to the _react-exercises/11-address-form/_ folder, install all dependencies, and start the app.
+Using your command line, you will need to navigate to the _react-exercises/12-address-form/_ folder, install all dependencies, and start the app.
 
 ```bash
-cd react-exercises/11-address-form/
+cd react-exercises/12-address-form/
 code . # if you would like to open this in a separate VSCode window
 yarn install
 yarn start
