@@ -12,6 +12,7 @@ function ListItem(props) {
         type="button"
         className="btn btn-link float-right"
         aria-label="Delete"
+        onClick={() => props.delete(props.index)}
       >
         x
       </button>
