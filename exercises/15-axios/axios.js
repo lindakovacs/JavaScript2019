@@ -14,8 +14,11 @@
  * @param {Object} data the entire AJAX response
  */
 const populateDropDown = data => {
+  console.log(data);
   $("#dropdown").empty();
-  $.each(data.results, function(i, p) {
+  // $.each(data.results, function(i, p) {
+  data.forEach(p => {
+    console.log(p);
     $("#dropdown").append(
       $("<option></option>")
         .val(p.name)
@@ -27,3 +30,20 @@ const populateDropDown = data => {
 /**
  * Axios here
  */
+
+// axios({
+//   method: "GET",
+//   url: "https://rickandmortyapi.com/api/character"
+// })
+//   .then(response => {
+//     populateDropDown(response.data.results);
+//   })
+//   .catch(data => {
+//     const htmlStr =
+//       '<div class="text-danger">We\'re sorry, but an unexpected error occurred</div>';
+//     $(".container").append(htmlStr);
+//   });
+
+  axios.get("https://rickandmortyapi.com/api/character").then(response => {
+    populateDropDown(response.data.results);
+  })
