@@ -30,6 +30,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build/
 build/Release
 
 # Dependency directories
@@ -192,6 +193,10 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
 
 ### ReactNative.Node Stack ###
 # Logs
