@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./UserDirectory.css";
+import axios from "axios";
 
 /**
  * Please read the README.md first.
@@ -33,9 +34,87 @@ import "./UserDirectory.css";
 
 class UserDirectory extends Component {
   state = {
-    users: []
+    userInput: "",
+    allUsers: [],
+    users: [],
+    isLoading: true,
+    hasError: false
+    // results: []
   };
+  componentDidMount() {
+    // axios({
+    //   method: "GET",
+    //   url: "https://randomuser.me/api?results=500&inc=name,email,picture"
+    // })
+    axios("https://randomuser.me/api?results=500&inc=name,email,picture")
+      .then(response => {
+        // e.g. { results: { [{ name: ... },{ email: ... }, { picture: ... }] } }
+        // console.log(response.data.results);
+        this.setState({
+          // users: response.data.results,
+          allUsers: response.data.results,
+          isLoading: false,
+          hasError: false
+        });
+      })
+      .catch(() => {
+        this.setState({
+          isLoading: false,
+          hasError: true });
+        });
+  }
+
+  // setUserInput = userInput => this.setState({ userInput });
+  // add = e => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     results: [...this.state.results, this.state.userInput]
+  //     // userInput: ""
+  //   });
+  // };
+
+  // handleInputChange = e => {
+  //   this.setState({
+  //     userInput: e.target.value
+  //   });
+  // };
+
+  filter = userInput => {
+    const input = userInput.toLowerCase();
+    this.setState({
+      userInput,
+      users: this.state.allUsers.filter(user => {
+        const name = `${user.name.first} ${user.name.last}`;
+        return name.match(input);
+      })
+    });
+  };
+
+  // handleInputChange = () => {
+  //   this.setState(
+  //     {
+  //       userInput: this.search.value
+  //     },
+  //     () => {
+  //       if (this.state.userInput && this.state.userInput.length > 1) {
+  //         if (this.state.userInput.length % 2 === 0) {
+  //           this.userInput();
+  //         }
+  //       } else if (!this.state.userInput) {
+  //       }
+  //     }
+  //   );
+  // };
+
   render() {
+    // if (this.state.isLoading)
+    //   return <div className="text-center">Loading ...</div>;
+    // if (this.state.hasError)
+    //   return (
+    //     <div className="text-danger">
+    //       We're sorry, but an unexpected error occurred
+    //     </div>
+    //   );
     return (
       <div className="UserDirectory">
         <div className="Search">
@@ -44,11 +123,20 @@ class UserDirectory extends Component {
             placeholder="Search..."
             aria-label="Search"
             className="search"
+            // ref={userInput => (this.search = userInput)}
+            // onChange={this.handleInputChange}
+            value={this.state.userInput}
+            onChange={e => this.filter(e.target.value)}
           />
         </div>
         <div className="UserDirectory-users">
           {/* Display loading and errors here */}
+          {/* <p>{this.state.hasError}</p>
           {this.state.users.length > 0 &&
+            this.state.users.map((user, index) => { */}
+            {this.state.isLoading && <p>Loading ...</p>}
+            {this.state.hasError && <p>We are sorry, an error has occurred.</p>}
+            {this.state.users.length > 0 &&
             this.state.users.map((user, index) => {
               /**
                * @const {string} name full name in title case
