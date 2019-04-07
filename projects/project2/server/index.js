@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 const path = require("path");
+const Cache = require("./cache");
+const searchCache = new Cache();
 const { cleanUpVolumeInfo } = require("./util");
 
 const {
@@ -78,33 +80,44 @@ try {
   });
 
   app.get("/books/search/:bookTitle", (req, res) => {
-    res.setHeader("Content-Type", "application/json");
-
     const { bookTitle } = req.params;
-    axios
-      .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&maxAllowedMaturityRating=not-mature&maxResults=20&orderBy=relevance&fields=items(id%2CvolumeInfo)%2CtotalItems`
-      )
-      .then(response => {
-        if (response.data.totalItems === 0) {
-          res.send({ books: [] });
-        } else {
-          const books = response.data.items.map(book => {
-            return {
-              id: book.id,
-              ...cleanUpVolumeInfo(book.volumeInfo),
-              shelf: findShelfForBook(book.id)
-            };
+
+    if (bookTitle.length < 2) {
+      searchCache.clear();
+      return res.send({ status: "searching" });
+    }
+
+    searchCache.add(bookTitle);
+    res.setHeader("Content-Type", "application/json");
+    setTimeout(() => {
+      if (searchCache.isLast(bookTitle)) {
+        searchCache.clear();
+        axios
+          .get(
+            `https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&maxAllowedMaturityRating=not-mature&maxResults=20&orderBy=relevance&fields=items(id%2CvolumeInfo)%2CtotalItems`
+          )
+          .then(response => {
+            if (response.data.totalItems === 0) {
+              res.send({ books: [] });
+            } else {
+              const books = response.data.items.map(book => {
+                return {
+                  id: book.id,
+                  ...cleanUpVolumeInfo(book.volumeInfo),
+                  shelf: findShelfForBook(book.id)
+                };
+              });
+              res.send({ status: "complete", books });
+            }
+          })
+          .catch(e => {
+            console.error(e);
+            res.send({
+              error: `Error searching for books with title ${bookTitle}`
+            });
           });
-          res.send({ books });
-        }
-      })
-      .catch(e => {
-        console.error(e);
-        res.send({
-          error: `Error searching for books with title ${bookTitle}`
-        });
-      });
+      } else return res.send({ status: "searching" });
+    }, 500);
   });
 
   app.get("/book/:bookId", (req, res) => {
