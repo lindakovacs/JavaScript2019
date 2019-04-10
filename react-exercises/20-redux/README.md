@@ -12,7 +12,7 @@ Remember, Redux contains three main players:
 
 ```bash
 yarn install
-code ./react-exercises/18-redux # If you want to open this in a new VSCode window.
+code ./react-exercises/20-redux # If you want to open this in a new VSCode window.
 yarn start
 ```
 
