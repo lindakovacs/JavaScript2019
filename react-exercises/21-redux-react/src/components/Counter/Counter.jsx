@@ -9,7 +9,7 @@ function Counter(props) {
         <button
           type="button"
           className="btn btn-primary btn-sm mr-1"
-          onClick={props.decrement}
+          onClick={props.decreaseCount}
           aria-label="Decrement"
         >
           -
@@ -17,7 +17,7 @@ function Counter(props) {
         <button
           type="button"
           className="btn btn-primary btn-sm"
-          onClick={props.increment}
+          onClick={props.increaseCount}
           aria-label="Increment"
         >
           +

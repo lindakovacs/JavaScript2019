@@ -6,13 +6,13 @@ export function rollDice() {
   };
 }
 
-export function increment() {
+export function increaseCount() {
   return {
     type: types.INCREASE_COUNT
   };
 }
 
-export function decrement() {
+export function decreaseCount() {
   return {
     type: types.DECREASE_COUNT
   };
