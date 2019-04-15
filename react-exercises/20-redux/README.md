@@ -11,8 +11,10 @@ Remember, Redux contains three main players:
 # Getting Started
 
 ```bash
+git pull upstream master
+cd ./react-exercises/20-redux
+code . # If you want to open this in a new VSCode window.
 yarn install
-code ./react-exercises/20-redux # If you want to open this in a new VSCode window.
 yarn start
 ```
 
