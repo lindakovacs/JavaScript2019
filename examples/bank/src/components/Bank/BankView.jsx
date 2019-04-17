@@ -28,13 +28,18 @@ class BankView extends Component {
   };
 
   render() {
+    const {
+      isLoading,
+      BankAccount: { bankBalance }
+    } = this.props;
+
     return (
       <div className="login-page">
         <div className="form">
           <span className="bank-balance">{`Welcome: ${this.props.User}`}</span>
           <br />
-          <span className="bank-balance">{`Your Account Balance:$${
-            this.props.BankAccount.bankBalance
+          <span className="bank-balance">{`Your Account Balance:${
+            !isLoading ? bankBalance : 'Loading'
           }`}</span>
         </div>
         <div className="form">
