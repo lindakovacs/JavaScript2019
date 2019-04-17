@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/AlbanyCanCodeCourses/JavaScript2019/issues"
   },
-  "homepage": "https://github.com/AlbanyCanCodeCourses/JavaScript2019#readme"
+  "homepage": "https://github.com/AlbanyCanCodeCourses/JavaScript2019#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
