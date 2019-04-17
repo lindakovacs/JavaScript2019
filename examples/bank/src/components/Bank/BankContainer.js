@@ -4,14 +4,14 @@ import BankView from './BankView';
 import { getBankBalance, depositMoney, withDrawMoney } from './BankActions';
 
 const BankContainer = props => {
-  console.log('Bank COntainer');
   return <BankView {...props} />;
 };
 
 function mapStateToProps(state) {
   return {
     User: state.Login.user,
-    BankAccount: state.BankAccount
+    BankAccount: state.BankAccount,
+    isLoading: state.BankAccount.isLoading
   };
 }
 
