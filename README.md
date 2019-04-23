@@ -35,7 +35,7 @@ Follow the guide [Creating a pull request from a fork](https://help.github.com/a
 ## Resources
 
 - [Syllabus](https://docs.google.com/document/d/1jr0HNb1p7APeSTSsMfz4CpeGs0xk94ighMLIdkF4w0U/edit?usp=sharing)
-- Projects: [1 Retrospective Board](https://docs.google.com/document/d/1ePLNNU1BKLD9WByelb7WyfdGpntwhpDIKn0KkhGxboI/edit?usp=sharing) | [2 Bookstore App](https://docs.google.com/document/d/1nDpv2dALdW2HUSJ-DpsOM644FM9BbxNjrzYtyQCpj-M/edit?usp=sharing)
+- Projects: [1 Retrospective Board](https://docs.google.com/document/d/1ePLNNU1BKLD9WByelb7WyfdGpntwhpDIKn0KkhGxboI/edit?usp=sharing) | [2 Bookstore App](https://docs.google.com/document/d/1nDpv2dALdW2HUSJ-DpsOM644FM9BbxNjrzYtyQCpj-M/edit?usp=sharing) | [Final Projects](https://docs.google.com/document/d/1HdMNUB_Tx4kypbmAu6Q2UQceCL_VLEQCH12Dt6GASDY/edit?usp=sharing)
 - [Slides](https://slides.com/accjavascriptframeworks)
 - Installation Guide: [Mac](docs/InstallationGuideMac.md) | [Windows](docs/InstallationGuideWindows.md) | [React Native](docs/InstallationGuideReactNative.md)
 - [MDN](https://developer.mozilla.org/en-US/) (Unofficial JavaScript Manual)
