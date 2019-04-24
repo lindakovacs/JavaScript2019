@@ -7,8 +7,8 @@ You will be connecting a presentational React compoents to the Redux store with 
 To begin, install and start the application from this directory:
 
 ```shell
-git pull origin upstream
-cd react-exercises/21-react-redux
+git pull upstream master
+cd react-exercises/21-redux-react
 code . # If you want to open in a new VSCode window
 yarn install
 yarn start
