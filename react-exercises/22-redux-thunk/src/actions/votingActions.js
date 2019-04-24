@@ -8,10 +8,27 @@ import { voteRequest } from "../services/api";
  * - ajax request failure
  */
 
+const ajaxLoading = () => {
+  return {
+    type: types.VOTE_PENDING
+  };
+};
+
 const ajaxSuccess = (categoryId, nomineeIndex) => {
   /**
    * Complete this function
    */
+  return {
+    type: types.VOTE_FULFILLED,
+    categoryId,
+    nomineeIndex
+  };
+};
+
+const ajaxFailure = () => {
+  return {
+    type: types.VOTE_REJECTED
+  };
 };
 
 export const vote = (categoryId, nomineeIndex) => {
@@ -25,5 +42,9 @@ export const vote = (categoryId, nomineeIndex) => {
      * passing all the necessary arguments
      * - dispatch the ajax request failure action when an error is caught
      */
+    dispatch(ajaxLoading());
+    voteRequest(categoryId, nomineeIndex)
+      .then(() => dispatch(ajaxSuccess(categoryId, nomineeIndex)))
+      .catch(() => dispatch(ajaxFailure()));
   };
 };

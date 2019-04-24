@@ -19,7 +19,7 @@ const reducer = (
     }
     /**
      * Uncomment the case below
-     *
+    */
     case types.VOTE_FULFILLED: {
       return {
         ...state,
@@ -31,16 +31,16 @@ const reducer = (
         hasError: false
       };
     }
-    */
+
     case types.FETCH_ALL_NOMINEES_PENDING:
-      // case types.VOTE_PENDING: // Uncomment me
+      case types.VOTE_PENDING: // Uncomment me
       return {
         ...state,
         isLoading: true,
         hasError: false
       };
     case types.FETCH_ALL_NOMINEES_REJECTED:
-      // case types.VOTE_REJECTED: // Uncomment me
+      case types.VOTE_REJECTED: // Uncomment me
       return {
         ...state,
         isLoading: false,
