@@ -1,3 +1,9 @@
+/**
+ * The credentials you can use to login are:
+ * Username: asdf
+ * Password: 1234
+ */
+
 import React, { Component } from "react";
 import axios from "axios";
 
