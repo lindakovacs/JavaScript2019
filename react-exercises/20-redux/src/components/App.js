@@ -1,6 +1,10 @@
 import React from "react";
 
 function App(props) {
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.addTodo();
+  };
   return (
     <div className="container">
       {/* Counter */}
@@ -62,7 +66,7 @@ function App(props) {
       </section>
       {/* TODO List */}
       <section className="mt-5">
-        <form className="form-inline" onSubmit={props.addTodo}>
+        <form className="form-inline" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
