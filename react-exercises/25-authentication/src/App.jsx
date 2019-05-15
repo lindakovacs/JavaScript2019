@@ -45,6 +45,7 @@ class App extends Component {
     })
       .then(response => {
         // Update me to use local storage and fix bug
+        localStorage.setItem("token", token);
         const { message } = response.data;
         this.setState({
           isLoading: false,
@@ -61,7 +62,7 @@ class App extends Component {
   };
   logout = () => {
     // Complete me
-
+    localStorage.removeItem("token");
     // Only doing this so that the component will re-render
     this.setState({
       count: this.state.count + 1
